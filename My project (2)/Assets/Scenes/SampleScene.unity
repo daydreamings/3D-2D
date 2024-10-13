@@ -279,7 +279,7 @@ Transform:
   m_GameObject: {fileID: 154138727}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.51, y: 0.13, z: 6.03}
+  m_LocalPosition: {x: 6.38, y: -1.37, z: 10.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -416,7 +416,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a002ac75137bdca4b9fe1f684cd3333e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1015,6 +1015,7 @@ GameObject:
   - component: {fileID: 622244355}
   - component: {fileID: 622244358}
   - component: {fileID: 622244359}
+  - component: {fileID: 622244360}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1190,6 +1191,22 @@ MonoBehaviour:
   cube: {fileID: 1949409610}
   yourButton: {fileID: 1708828439}
   scaleFactor: 500
+--- !u!114 &622244360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622244350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ddaa76ade3dce84ca8df13699505d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera_1: {fileID: 330585543}
+  Camera_2: {fileID: 784532375}
+  yourCustomeButton: {fileID: 1708828442}
+  Player: {fileID: 622244350}
 --- !u!1 &664221587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,7 +1376,7 @@ Transform:
   m_GameObject: {fileID: 702368983}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.92, z: -1.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1711,7 +1728,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera_1: {fileID: 330585543}
   Camera_2: {fileID: 784532375}
-  Manager: 1
+  yourCustomeButton: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &1115939015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1829,7 @@ Transform:
   m_GameObject: {fileID: 1115939015}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.0055463314, z: 0.41880798}
+  m_LocalPosition: {x: 6.33, y: -1.39, z: 8.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1966,6 +1984,7 @@ GameObject:
   - component: {fileID: 1708828441}
   - component: {fileID: 1708828440}
   - component: {fileID: 1708828439}
+  - component: {fileID: 1708828442}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2038,13 +2057,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 993713089}
-        m_TargetAssemblyTypeName: SwitchCamera, Assembly-CSharp
-        m_MethodName: ChangeCamera
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2088,6 +2107,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708828437}
   m_CullTransparentMesh: 1
+--- !u!114 &1708828442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708828437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193e967f9bef2ca48a23d354afdb33d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1949409610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,7 +2145,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.09620619, z: -78.24853}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 213610313}
