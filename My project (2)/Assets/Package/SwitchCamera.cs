@@ -10,27 +10,26 @@ using UnityEngine.EventSystems;
 {
     public GameObject Camera_1;
     public GameObject Camera_2;
-    public CustomButton yourCustomeButton; // UI-Button
+    
     public GameObject Player;
     private int Manager = 0;
     
-    void Start()
+    void Update()
     {
-        if (yourCustomeButton != null)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            if(yourCustomeButton != null)
-            {
-                yourCustomeButton.OnButtonClicked += ManagerCamera;
-            }
+            // if(yourCustomeButton != null)
+            // {
+            //   yourCustomeButton.OnButtonClicked += ManagerCamera;
+            //}
+            ManagerCamera();
+           
         }
     }
 
 
 
-    public void ChangeCamera()
-    {
-        GetComponent<Animator>().SetTrigger("Change");
-    }
+  
 
     public void ManagerCamera()
     {
